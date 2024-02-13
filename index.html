@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#container{
+		background-color: #afeeee;
+		height: 450px;
+		width: 300px;
+		border-radius: 8px;
+		position: relative;
+		top:-10px;
+		left: 30%;
+	}	
+	.screen{
+		background-color: #ffff99;
+		width: 270px;
+		height: 60px;
+		position: relative;
+		overflow: visible;
+		top: 20px;
+		left: 15px;
+		font-family: Wide Latin;
+
+
+	}
+	.screen input{
+		position: relative;
+		left: 2px;
+		height: 56px;
+		width: 266px;
+		color: black;
+		background-color: #e5dfa0;
+		font-size: 25px;
+		text-align: right;
+		font-family: Wide Latin;
+
+
+	}
+	.btns{
+		position: relative;
+		top: 20px;
+		left: 15px;
+	}
+	.button{
+		width:40px;
+		height: 30px;
+		border: none;
+		border-radius: 7px;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+	.button.black{
+		 color: white;
+		 background-color: black;
+		 border-bottom: 2px solid #647489;
+		 border-top:2px black;
+	}
+	p{
+		line-height: 20px;
+	}
+	.button.silver{
+		color: green;
+		border-bottom: 2px solid black;
+
+	}
+	.button.red{
+		color: white;
+		background-color:red;
+		border-bottom: 2px solid #647489;
+
+
+	}
+	</style>
+	<title>scientific calc</title>
+</head>
+<body oncontextmenu="return false">
+	<div id="container">
+		<div class="screen">
+		<form name="calculator"><input type="text" name="display" id="scn" maxlength="50" size="20" placeholder="athanase"></form></div>
+			<div class="btns">
+
+			<p><input type="button"value="sin" class="button black" onclick="calculator.display.value=Math.sin(calculator.display.value)"><input type="button"value="COS"class="button black" onclick="calculator.display.value+=Math.cos(calculator.display.value)"><input type="button"value="TAN"class="button black" onclick="calculator.display.value+=Math.tan(calculator.display.value)"><input type="button"value="()"class="button black" onclick="calculator.display.value+='()'"><input type="button"value="CLR" class="button black" onclick="calculator.display.value=''">
+</p>
+
+
+<p><input type="button"value="SQRT" class="button black" onclick="calculator.display.value=Math.sqrt(calculator.display.value,1/2)"><input type="button"value="SQR"class="button black" onclick="calculator.display.value=Math.pow(calculator.display.value,2)"><input type="button"value="*"class="button black" onclick="calculator.display.value+='*'"><input type="button"value="LOG"class="button black" onclick="calculator.display.value=Math.log(calculator.display.value)"><input type="button"value="LN"class="button black" onclick="calculator.display.value=Math.ln(calculator.display.value)">
+</p>
+
+<p><input type="button"value="REL" class="button black" onclick="calculator.display.value+='REL'"><input type="button"value="("class="button black" onclick="calculator.display.value+='('"><input type="button"value=")"class="button black" onclick="calculator.display.value+=')'"><input type="button"value="M+"class="button black" onclick="calculator.display.value+='M+'"><input type="button"value="MOD"class="button black" onclick="calculator.display.value=eval(calculator.display.value)">
+</p>
+
+
+
+<p><input type="button"value="7" class="button silver" onclick="calculator.display.value+='7'"><input type="button"value="8"class="button silver" onclick="calculator.display.value+='8'"><input type="button"value="9"class="button silver" onclick="calculator.display.value+='9'"><input type="button"value="DEL"class="button red" onclick="calculator.display.value=calculator.display.value.substring(0,calculator.display.value.length-1)"><input type="button"value="EXIT"class="button red" onclick="calculator.display.value+='EXIT'">
+</p>
+
+
+<p><input type="button"value="4"class="button silver" onclick="calculator.display.value+='4'">
+
+	<input type="button"value="5"class="button silver" onclick="calculator.display.value+='5'"><input type="button"value="6"class="button silver" onclick="calculator.display.value+='6'"><input type="button"value="x"class="button silver" onclick="calculator.display.value+='*'"><input type="button"value="/"class="button silver" onclick="calculator.display.value+='/'"></p>
+
+	<p><input type="button"value="1"class="button silver" onclick="calculator.display.value+='1'">
+
+	<input type="button"value="2"class="button silver" onclick="calculator.display.value+='2'"><input type="button"value="3"class="button silver" onclick="calculator.display.value+='3'"><input type="button"value="+"class="button silver" onclick="calculator.display.value+='+'"><input type="button"value="-"class="button silver" onclick="calculator.display.value+='-'"></p>
+
+<p><input type="button"value="0" class="button silver" onclick="calculator.display.value+='0'"><input type="button"value="."class="button silver" onclick="calculator.display.value+='.'"><input type="button"value="EXP"class="button silver" onclick="calculator.display.value+=Math.exp(calculator.display.value)"><input type="button"value="PI"class="button silver" onclick="calculator.display.value+=Math.PI" ><input type="button"value="="class="button silver" onclick="calculator.display.value=eval(calculator.display.value)">
+</p>
+</div>
+</body>
+</html>
